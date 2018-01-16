@@ -9,7 +9,7 @@ export function isNode() {
 }
 
 export function fetchDefaultDeviceName() { 
-    return new Promise((resolve, reject) => {
+    return new Promise<string>((resolve, reject) => {
         if(isNode()) {
             const exec: Function = require('child_process').exec;
             Promise.all([
